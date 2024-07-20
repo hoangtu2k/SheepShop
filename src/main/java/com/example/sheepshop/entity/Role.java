@@ -20,29 +20,29 @@ public class Role implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "Id", nullable = false)
+    @Column(name = "id", nullable = false)
     private Integer id;
 
-    @Column(name = "Name")
+    @Column(name = "name")
     private String name;
 
-    @Column(name = "CreateDate")
+    @Column(name = "create_date")
     @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm")
     @Temporal(TemporalType.TIMESTAMP)
     private Date createDate;
 
-    @Column(name = "UpdateDate")
+    @Column(name = "update_date")
     @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm")
     @Temporal(TemporalType.TIMESTAMP)
     private Date updateDate;
 
-    @Column(name = "CreateBy")
+    @Column(name = "create_by")
     private String createBy;
 
-    @Column(name = "UpdateBy")
+    @Column(name = "update_by")
     private String updateBy;
 
-    @Column(name = "Status")
+    @Column(name = "status")
     private Integer status;
 
     @JsonIgnore
