@@ -317,3 +317,71 @@ CREATE TABLE Background (
     UpdateBy VARCHAR(30),
     Status INT
 );
+
+
+-- Thêm dữ liệu vào bảng "Category"
+INSERT INTO category(name, create_date, update_date, create_by, update_by, status)
+VALUES (N'Áo thun tay ngắn',  NOW() , NOW() , 'Admin', 'Admin', 0),
+	   (N'Áo thun tay dài',  NOW() , NOW() , 'Admin', 'Admin', 0);
+
+-- Thêm dữ liệu vào bảng "Design"
+INSERT INTO design(name, create_date, update_date, create_by, update_by, status)
+VALUES (N'Họa tiết kẻ sọc ngang trẻ trung',  NOW() , NOW() , 'Admin', 'Admin', 0),
+	   (N'Thiết kế logo bóng chày in nổi bật ở ngực trái',  NOW() , NOW() , 'Admin', 'Admin', 0);
+
+-- Thêm dữ liệu vào bảng "Brand"
+INSERT INTO brand(name, create_date, update_date, create_by, update_by, status)
+VALUES ('MLB',  NOW() , NOW() , 'Admin', 'Admin', 0),
+	   ('H&M',  NOW() , NOW() , 'Admin', 'Admin', 0);
+
+-- Thêm dữ liệu vào bảng "NeckType"
+INSERT INTO neck_type(name, create_date, update_date, create_by, update_by, status)
+VALUES (N'Cổ tròn',  NOW() , NOW() , 'Admin', 'Admin', 0),
+	   (N'Cổ chữ V',  NOW() , NOW() , 'Admin', 'Admin', 0);
+
+-- Thêm dữ liệu vào bảng "HandType"
+INSERT INTO hand_type(name, create_date, update_date, create_by, update_by, status)
+VALUES (N'Tay ngắn',  NOW() , NOW() , 'Admin', 'Admin', 0),
+	   (N'Tay dài',  NOW() , NOW() , 'Admin', 'Admin', 0);
+
+-- Thêm dữ liệu vào bảng "Material"
+INSERT INTO material(name, create_date, update_date, create_by, update_by, status)
+VALUES ('Cotton',  NOW() , NOW() , 'Admin', 'Admin', 0),
+	   ('TBC',  NOW() , NOW() , 'Admin', 'Admin', 0),
+	   ('Polyester',  NOW() , NOW() , 'Admin', 'Admin', 0);
+
+-- Thêm dữ liệu vào bảng "Color"
+INSERT INTO color(name, create_date, update_date, create_by, update_by, status)
+VALUES (N'Den',  NOW() , NOW() , 'Admin', 'Admin', 0),
+	   (N'Trắng',  NOW() , NOW() , 'Admin', 'Admin', 0),
+	   (N'Đỏ',  NOW() , NOW() , 'Admin', 'Admin', 0),   
+	   (N'Hồng',  NOW() , NOW() , 'Admin', 'Admin', 0),
+	   (N'Vàng',  NOW() , NOW() , 'Admin', 'Admin', 0);
+
+-- Thêm dữ liệu vào bảng "Size"
+INSERT INTO size(name, create_date, update_date, create_by, update_by, status)
+VALUES ('S',  NOW() , NOW() , 'Admin', 'Admin', 0),
+	   ('M',  NOW() , NOW() , 'Admin', 'Admin', 0),
+	   ('L',  NOW() , NOW() , 'Admin', 'Admin', 0),
+	   ('XL',  NOW() , NOW() , 'Admin', 'Admin', 0);
+
+
+-------------------------------------- Inser into product end --------------------------------------------
+
+-- Thêm dữ liệu vào bảng "role"
+INSERT INTO Role (name, create_date, update_date, create_by, update_by, status)
+VALUES ('Admin',  NOW() , NOW() , 'Admin', 'Admin', 0),
+	   ('Staff',  NOW() , NOW() , 'Admin', 'Admin', 0);
+
+-- Thêm dữ liệu vào bảng "employee"
+INSERT INTO Employee (code, fullname, username, password, image, gender, phone, email, create_date, update_date, create_by, update_by, status, role_id)
+VALUES ('NV01', 'John Doe staff', 'staff', '123456', 'Image URL', 1, '0123456789', 'employee@example.com',  NOW() , NOW() , 'Admin', 'Admin', 0, 2),
+	   ('NV02', 'John Doe admin', 'admin', '123456', 'Image URL', 1, '0123456789', 'employee@example.com',  NOW() , NOW() , 'Admin', 'Admin', 0, 1);
+
+-- Thêm dữ liệu vào bảng "customer"
+INSERT INTO Customer (code, fullname, username, password, image, gender, phone, email, create_date, update_date, create_by, update_by, status)
+VALUES ('NV01', 'Customer', 'sa', '123456', 'Image URL', 1, '0123456789', 'employee@example.com',  NOW() , NOW() , 'Admin', 'Admin', 0);
+
+-- Thêm dữ liệu vào bảng "cart"
+INSERT INTO Cart (customer_id) 
+VALUES (1);
